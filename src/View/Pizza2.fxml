@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="480.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pizzaria.PedidoController">
+   <children>
+      <TabPane prefHeight="480.0" prefWidth="653.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="PEDIDO" text="Pizza">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #BF0628;">
+                     <children>
+                        <VBox prefHeight="456.0" prefWidth="653.0">
+                           <children>
+                              <Label text="Pizza Bit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Escolha sua pizza" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button fx:id="BtD20" mnemonicParsing="false" onAction="#dado" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #D9D9D9;" text="Aleatório">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </VBox.margin></Button>
+                              <Label prefHeight="23.0" prefWidth="83.0" text="1° Sabor" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="Cb1Sabor" prefWidth="150.0" style="-fx-background-color: #D9D9D9;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></ComboBox>
+                              <Label prefHeight="23.0" prefWidth="83.0" text="2° Sabor" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="Cb2Sabor" prefWidth="150.0" style="-fx-background-color: #D9D9D9;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></ComboBox>
+                              <Label prefHeight="23.0" prefWidth="83.0" text="3° Sabor" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="Cb3Sabor" prefWidth="150.0" style="-fx-background-color: #D9D9D9;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></ComboBox>
+                              <Label text="Tamanho" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="CbTamanho" prefWidth="150.0" style="-fx-background-color: #D9D9D9;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></ComboBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="BtPedir" mnemonicParsing="false" onAction="#ClicouPedir" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #D9D9D9;" text="Pedir">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="500.0" fitWidth="709.0" layoutX="238.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../imagens/pizza.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pedidos">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BF0628;">
+                     <children>
+                        <HBox prefHeight="452.0" prefWidth="653.0">
+                           <children>
+                              <VBox prefHeight="452.0" prefWidth="235.0">
+                                 <children>
+                                    <Label text="Pizza Bit" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Procure um pedido" textFill="WHITE">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="TxPesquisa" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <HBox prefHeight="28.0" prefWidth="235.0">
+                                       <children>
+                                          <Button fx:id="BtPesquisar" mnemonicParsing="false" onAction="#pesquisa" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #D9D9D9;" text="Pesquisar">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="Btdeleta" mnemonicParsing="false" onAction="#deletaPedido" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #D9D9D9;" text="Deletar">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Button fx:id="BtPDF" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #D9D9D9;" text="PDF">
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="TabelaID" prefHeight="452.0" prefWidth="418.0">
+                                <columns>
+                                  <TableColumn fx:id="colunaID" prefWidth="37.0" text="ID" />
+                                  <TableColumn fx:id="colunaSabor1" prefWidth="100.0" text="Sabor 1" />
+                                    <TableColumn fx:id="colunaSabor2" prefWidth="100.0" text="Sabor 2" />
+                                    <TableColumn fx:id="colunaSabor3" prefWidth="100.0" text="Sabor 3" />
+                                    <TableColumn fx:id="colunaTamanho" text="Tamanho" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

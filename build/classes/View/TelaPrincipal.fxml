@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <SplitPane dividerPositions="0.23597883597883598" layoutX="4.0" layoutY="8.0" prefHeight="390.0" prefWidth="947.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="219.0">
+               <children>
+                  <TabPane layoutX="5.0" layoutY="2.0" prefHeight="378.0" prefWidth="212.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="CADASTRO">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="212.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" text="ID" />
+                                    <TextField fx:id="digitaID" layoutX="57.0" layoutY="21.0" prefHeight="25.0" prefWidth="144.0" />
+                                    <Label layoutX="8.0" layoutY="59.0" text="NOME" />
+                                    <TextField fx:id="digitaNome" layoutX="56.0" layoutY="54.0" prefHeight="25.0" prefWidth="144.0" />
+                                    <Label layoutX="7.0" layoutY="90.0" text="CARGO" />
+                                    <TextField fx:id="digitaCargo" layoutX="57.0" layoutY="86.0" prefHeight="25.0" prefWidth="144.0" />
+                                    <Label layoutX="6.0" layoutY="124.0" text="SALARIO" />
+                                    <TextField fx:id="digitaSalario" layoutX="57.0" layoutY="121.0" prefHeight="25.0" prefWidth="144.0" />
+                                    <Label layoutX="7.0" layoutY="160.0" text="DATA" />
+                                    <DatePicker fx:id="datanasc" layoutX="56.0" layoutY="156.0" prefHeight="25.0" prefWidth="146.0" />
+                                    <Label layoutX="10.0" layoutY="195.0" text="CEL" />
+                                    <TextField fx:id="digitaTelefone" layoutX="56.0" layoutY="191.0" prefHeight="25.0" prefWidth="144.0" />
+                                    <Label layoutX="10.0" layoutY="228.0" text="TIPO" />
+                                    <ComboBox fx:id="cbBoxTipo" layoutX="53.0" layoutY="224.0" prefWidth="150.0" promptText="Escolha o contrato" />
+                                    <Button fx:id="btenviar" layoutX="50.0" layoutY="274.0" mnemonicParsing="false"  text="ENVIAR" />
+                                    <Button fx:id="btlimpar" layoutX="50.0" layoutY="310.0" mnemonicParsing="false"  text="LIMPAR" />
+                                    <Button fx:id="btsair" layoutX="124.0" layoutY="310.0" mnemonicParsing="false" text="SAIR" />
+                                    <Button fx:id="btgerarpdf" layoutX="124.0" layoutY="274.0" mnemonicParsing="false" text="GERAR PDF" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="PESQUISA">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="21.0" text="PESQUISA" />
+                                    <TextField fx:id="digitaPesquisa" layoutX="67.0" layoutY="17.0" prefHeight="25.0" prefWidth="139.0" text="Digite a pesquisa" />
+                                    <Button fx:id="btprocurar" layoutX="5.0" layoutY="57.0" mnemonicParsing="false" text="PROCURAR" />
+                                    <Button fx:id="btexcluir" layoutX="106.0" layoutY="57.0" mnemonicParsing="false" text="EXCLUIR" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="611.0">
+               <children>
+                  <TableView fx:id="TabelaID" layoutX="2.0" layoutY="2.0" prefHeight="388.0" prefWidth="712.0">
+                    <columns>
+                      <TableColumn fx:id="colunaID" prefWidth="36.0" text="ID" />
+                      <TableColumn fx:id="colunaNOME" prefWidth="189.0" text="NOME" />
+                        <TableColumn fx:id="colunaCARGO" prefWidth="83.0" text="CARGO" />
+                        <TableColumn fx:id="colunaSALARIO" prefWidth="89.0" text="SALARIO" />
+                        <TableColumn fx:id="colunaDATA" prefWidth="109.0" text="DATA" />
+                        <TableColumn fx:id="colunaTELEFONE" prefWidth="79.0" text="CEL" />
+                        <TableColumn fx:id="colunaTIPO" prefWidth="117.0" text="TIPO" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
